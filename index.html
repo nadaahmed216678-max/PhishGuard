@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn to recognize phishing attacks, analyze suspicious messages, and practice safer online habits.">
+    <title>PhishGuard | Phishing Awareness Center</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <a href="#" class="logo">
+        <span class="logo-icon">P</span>
+        Phish<span>Guard</span>
+    </a>
+
+    <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#warning-signs">Warning Signs</a>
+        <a href="#quiz">Quiz</a>
+        <a href="#checker">Message Checker</a>
+        <a href="#simulation">Simulation</a>
+    </nav>
+</header>
+
+<main>
+    <section class="hero" id="about">
+        <div class="hero-content">
+            <span class="eyebrow">CYBERSECURITY AWARENESS</span>
+            <h1>Think Before You <span>Click.</span></h1>
+            <p>
+                Learn how to spot phishing attacks, protect your personal
+                information, and make safer decisions online.
+            </p>
+
+            <div class="hero-actions">
+                <a class="button button-primary" href="#quiz">Test Your Knowledge</a>
+                <a class="button button-secondary" href="#checker">Check a Message</a>
+            </div>
+
+            <div class="hero-note">
+                <span class="status-dot"></span>
+                Learn. Detect. Stay protected.
+            </div>
+        </div>
+
+        <div class="hero-visual">
+            <div class="security-orbit orbit-one"></div>
+            <div class="security-orbit orbit-two"></div>
+            <div class="shield">
+                <svg viewBox="0 0 120 140" role="img"
+                     aria-label="Security shield illustration">
+                    <path d="M60 7 L105 24 V62
+                             C105 92 87 115 60 132
+                             C33 115 15 92 15 62 V24 Z"
+                          fill="#7c3aed" stroke="#a78bfa" stroke-width="3"/>
+                    <path d="M60 20 L93 32 V61
+                             C93 83 81 101 60 115
+                             C39 101 27 83 27 61 V32 Z"
+                          fill="#193b6a"/>
+                    <path d="M42 64 L54 76 L79 49"
+                          fill="none" stroke="#ffffff"
+                          stroke-width="7" stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="floating-card card-top">
+                <span class="mini-icon">✓</span>
+                <div><strong>Stay Alert</strong><small>Verify before you trust</small></div>
+            </div>
+            <div class="floating-card card-bottom">
+                <span class="mini-icon warning-icon">!</span>
+                <div><strong>Suspicious Link?</strong><small>Stop and investigate</small></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="intro-section">
+        <div class="section-heading">
+            <span class="eyebrow">UNDERSTAND THE THREAT</span>
+            <h2>What is Phishing?</h2>
+            <p>
+                Phishing is a cyberattack in which criminals impersonate
+                trusted people or organizations to trick users into revealing
+                sensitive information or clicking dangerous links.
+            </p>
+        </div>
+
+        <div class="info-grid" id="warning-signs">
+            <article class="info-card">
+                <span class="feature-icon purple-icon">!</span>
+                <h3>Urgent Requests</h3>
+                <p>Messages that pressure you to act immediately or threaten account suspension.</p>
+            </article>
+
+            <article class="info-card">
+                <span class="feature-icon blue-icon">↗</span>
+                <h3>Suspicious Links</h3>
+                <p>Unexpected links or web addresses that imitate legitimate websites.</p>
+            </article>
+
+            <article class="info-card">
+                <span class="feature-icon pink-icon">✉</span>
+                <h3>Unknown Senders</h3>
+                <p>Unexpected messages, unusual sender addresses, or requests for private data.</p>
+            </article>
+        </div>
+    </section>
+
+    <section class="safety-section">
+        <div>
+            <span class="eyebrow">YOUR SECURITY CHECKLIST</span>
+            <h2>Stay One Step Ahead</h2>
+            <p>Build safer habits with a few simple checks.</p>
+        </div>
+
+        <ul class="safety-list">
+            <li><span>✓</span> Verify the sender's email address.</li>
+            <li><span>✓</span> Inspect links before opening them.</li>
+            <li><span>✓</span> Never share passwords or verification codes.</li>
+            <li><span>✓</span> Confirm unexpected requests through official channels.</li>
+            <li><span>✓</span> Report suspicious messages to the appropriate organization.</li>
+        </ul>
+    </section>
+
+    <section class="tool-section" id="quiz">
+        <div class="section-heading">
+            <span class="eyebrow">CHALLENGE YOURSELF</span>
+            <h2>Phishing Awareness Quiz</h2>
+            <p>Answer the questions and see how well you recognize common phishing tactics.</p>
+        </div>
+
+        <div class="tool-card">
+            <button class="button button-primary" id="startQuiz">Start Quiz</button>
+            <div id="quiz" aria-live="polite"></div>
+        </div>
+    </section>
+
+    <section class="tool-section" id="checker">
+        <div class="section-heading">
+            <span class="eyebrow">INTERACTIVE SECURITY TOOL</span>
+            <h2>Phishing Message Checker</h2>
+            <p>Check a message for common warning signs. Your text is analyzed in this browser.</p>
+        </div>
+
+        <div class="tool-card">
+            <label for="messageInput">Suspicious message</label>
+            <textarea id="messageInput" rows="6"
+                placeholder="Paste a suspicious email or message here..."></textarea>
+
+            <div class="tool-actions">
+                <button class="button button-primary" id="checkMessage">Analyze Message</button>
+                <button class="button button-secondary" id="clearMessage">Clear</button>
+            </div>
+
+            <div id="analysisResult" aria-live="polite"></div>
+            <p class="disclaimer">
+                This tool uses basic text patterns. It cannot definitively
+                determine whether a message is safe or malicious.
+            </p>
+        </div>
+    </section>
+
+    <section class="tool-section" id="simulation">
+        <div class="section-heading">
+            <span class="eyebrow">PRACTICE SAFELY</span>
+            <h2>Phishing Simulation</h2>
+            <p>Review each example and decide whether it looks like phishing or a legitimate message.</p>
+        </div>
+
+        <div class="tool-card simulation-card">
+            <div class="simulation-label">MESSAGE REVIEW</div>
+            <p id="simulationMessage"></p>
+            <div class="tool-actions">
+                <button class="button button-danger" id="phishingChoice">Phishing</button>
+                <button class="button button-secondary" id="legitimateChoice">Legitimate</button>
+            </div>
+            <p id="simulationFeedback" aria-live="polite"></p>
+            <div class="simulation-footer">
+                <span id="simulationProgress">Example 1 of 3</span>
+                <button class="button button-primary" id="nextSimulation">Next Example</button>
+                <button class="button button-secondary" id="resetSimulation">Restart</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="learn-more">
+        <div>
+            <span class="eyebrow">KEEP LEARNING</span>
+            <h2>Knowledge Is Your First Line of Defense</h2>
+            <p>Explore trusted cybersecurity guidance to learn more about phishing and online safety.</p>
+        </div>
+        <a class="button button-primary"
+           href="https://www.cisa.gov/secure-our-world"
+           target="_blank" rel="noopener noreferrer">
+            Visit CISA
+        </a>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <a href="#" class="logo">Phish<span>Guard</span></a>
+    <p>An educational project for phishing awareness and safer online habits.</p>
+    <small>Educational use only · Always verify suspicious messages independently.</small>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+
